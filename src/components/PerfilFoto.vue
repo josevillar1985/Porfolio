@@ -40,7 +40,7 @@
     </v-row>
 
   </v-container>
-  
+
 </template>
 
 <script>
@@ -52,7 +52,7 @@ export default {
 <style scoped>
 
 .content-width {
-  max-width: 80%;
+  max-width: 60%;
   margin: 0 auto;
 }
 
@@ -65,7 +65,7 @@ export default {
 
 
 .hero-title {
-  font-size: 64px;
+  font-size: 50px;
   line-height: 1.1;
   font-weight: 700;
   margin: 0;
@@ -107,10 +107,9 @@ export default {
 }
 
 .hero-container {
-  min-height: calc(100vh - 170px); 
+  min-height: calc(100vh - 200px); 
   display: flex;
   align-items: center;
 }
-
 
 </style>

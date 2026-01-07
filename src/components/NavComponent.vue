@@ -1,16 +1,19 @@
 <template>
   <v-app-bar :elevation="0" color="transparent" class="pa-4">
-    
+
     <div class="nav-center">
       <router-link to="/" class="nav-link mr-6">
         Inicio
       </router-link>
+
+      <router-link to="/#projects" class="nav-link mr-6">
+        Proyectos
+      </router-link>
+
       <router-link to="/about" class="nav-link mr-6">
         Sobre mí
       </router-link>
-      <router-link to="/projects" class="nav-link mr-6">
-        Proyectos
-      </router-link>
+      
       <router-link to="/contact" class="nav-link">
         Contacto
       </router-link>
@@ -21,16 +24,15 @@
 
 
 <style scoped>
-
 .nav-link {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
     'Helvetica Neue', sans-serif;
 
-  font-size: 13px;          
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.02em;     
-  text-transform: uppercase; 
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 
   color: #cfd3dc;
   text-decoration: none;
@@ -73,10 +75,10 @@
 .router-link-exact-active::after {
   width: 100%;
 }
+
 .nav-center {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
 </style>
