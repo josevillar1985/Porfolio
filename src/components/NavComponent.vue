@@ -1,19 +1,24 @@
 <template>
-  <v-app-bar :elevation="0" color="transparent" class="d-flex justify-center pa-4">
-    <router-link to="/" class="nav-link mr-6">
-      Inicio
-    </router-link>
-    <router-link to="/about" class="nav-link mr-6">
-      Sobre mí
-    </router-link>
-    <router-link to="/projects" class="nav-link mr-6">
-      Proyectos
-    </router-link>
-    <router-link to="/contact" class="nav-link">
-      Contacto
-    </router-link>
+  <v-app-bar :elevation="0" color="transparent" class="pa-4">
+    
+    <div class="nav-center">
+      <router-link to="/" class="nav-link mr-6">
+        Inicio
+      </router-link>
+      <router-link to="/about" class="nav-link mr-6">
+        Sobre mí
+      </router-link>
+      <router-link to="/projects" class="nav-link mr-6">
+        Proyectos
+      </router-link>
+      <router-link to="/contact" class="nav-link">
+        Contacto
+      </router-link>
+    </div>
+
   </v-app-bar>
 </template>
+
 
 <style scoped>
 
@@ -68,4 +73,10 @@
 .router-link-exact-active::after {
   width: 100%;
 }
+.nav-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 </style>
