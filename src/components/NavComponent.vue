@@ -1,0 +1,71 @@
+<template>
+  <v-app-bar :elevation="0" color="transparent" class="d-flex justify-center pa-4">
+    <router-link to="/" class="nav-link mr-6">
+      Inicio
+    </router-link>
+    <router-link to="/about" class="nav-link mr-6">
+      Sobre mí
+    </router-link>
+    <router-link to="/projects" class="nav-link mr-6">
+      Proyectos
+    </router-link>
+    <router-link to="/contact" class="nav-link">
+      Contacto
+    </router-link>
+  </v-app-bar>
+</template>
+
+<style scoped>
+
+.nav-link {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+
+  font-size: 13px;          
+  font-weight: 500;
+  letter-spacing: 0.02em;     
+  text-transform: uppercase; 
+
+  color: #cfd3dc;
+  text-decoration: none;
+
+  position: relative;
+  padding-bottom: 6px;
+
+  transition: color 0.25s ease;
+}
+
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0%;
+  height: 2px;
+
+  background: linear-gradient(90deg, #4ade80, #22d3ee);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+.router-link-exact-active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.router-link-exact-active::after {
+  width: 100%;
+}
+</style>
