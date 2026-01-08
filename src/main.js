@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-
+import '@mdi/font/css/materialdesignicons.css'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import '@/assets/style.css'

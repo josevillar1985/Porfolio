@@ -268,6 +268,11 @@ export default {
 .tech.mysql {
   color: #f29111;
 }
+/* ICONOS DE TECNOLOGÍA — BLANCO SUAVE */
+.tech :deep(.v-icon) {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 
 /* ===============================
    RESPONSIVE

@@ -1,27 +1,56 @@
 <template>
   <v-app-bar :elevation="0" color="transparent" class="pa-4">
-
     <div class="nav-center">
+
+      <!-- HOME (RUTA) -->
       <router-link to="/" class="nav-link mr-6">
         Inicio
       </router-link>
 
-      <router-link to="/#projects" class="nav-link mr-6">
+      <!-- PROYECTOS (SCROLL) -->
+      <a
+        href="#projects"
+        class="nav-link mr-6"
+        :class="{ active: active === 'projects' }"
+        @click="active = 'projects'"
+      >
         Proyectos
-      </router-link>
+      </a>
 
-      <router-link to="/about" class="nav-link mr-6">
+      <!-- SOBRE MÍ (SCROLL) -->
+      <a
+        href="#about"
+        class="nav-link mr-6"
+        :class="{ active: active === 'about' }"
+        @click="active = 'about'"
+      >
         Sobre mí
-      </router-link>
-      
-      <router-link to="/contact" class="nav-link">
-        Contacto
-      </router-link>
-    </div>
+      </a>
 
+      <!-- CONTACTO (SCROLL) -->
+      <a
+        href="#contact"
+        class="nav-link"
+        :class="{ active: active === 'contact' }"
+        @click="active = 'contact'"
+      >
+        Contacto
+      </a>
+
+    </div>
   </v-app-bar>
 </template>
 
+<script>
+export default {
+  name: 'NavBar',
+  data() {
+    return {
+      active: ''
+    }
+  }
+}
+</script>
 
 <style scoped>
 .nav-link {
@@ -36,18 +65,15 @@
 
   color: #cfd3dc;
   text-decoration: none;
-
   position: relative;
   padding-bottom: 6px;
 
   transition: color 0.25s ease;
 }
 
-
 .nav-link:hover {
   color: #ffffff;
 }
-
 
 .nav-link::after {
   content: "";
@@ -57,7 +83,6 @@
 
   width: 0%;
   height: 2px;
-
   background: linear-gradient(90deg, #4ade80, #22d3ee);
   transition: width 0.3s ease;
 }
@@ -66,7 +91,17 @@
   width: 100%;
 }
 
+/* ACTIVE MANUAL */
+.nav-link.active {
+  color: #ffffff;
+  font-weight: 600;
+}
 
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* RUTA HOME */
 .router-link-exact-active {
   color: #ffffff;
   font-weight: 600;
