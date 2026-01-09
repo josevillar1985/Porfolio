@@ -62,7 +62,7 @@ export default {
   font-weight: 500;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-
+  
   color: #cfd3dc;
   text-decoration: none;
   position: relative;
@@ -91,7 +91,7 @@ export default {
   width: 100%;
 }
 
-/* ACTIVE MANUAL */
+
 .nav-link.active {
   color: #ffffff;
   font-weight: 600;
@@ -101,7 +101,7 @@ export default {
   width: 100%;
 }
 
-/* RUTA HOME */
+
 .router-link-exact-active {
   color: #ffffff;
   font-weight: 600;

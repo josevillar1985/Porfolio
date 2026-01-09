@@ -1,9 +1,17 @@
 <template>
   <v-container class="hero-container">
-    <v-row align="center" justify="center">
+    <v-row
+      class="hero-row"
+      align="center"
+      justify="center"
+    >
 
       <!-- TEXTO -->
-      <v-col cols="12" md="6" class="text-block animate-left">
+      <v-col
+        cols="12"
+        md="6"
+        class="text-block animate-left"
+      >
         <h1 class="hero-title">José Angel Villar</h1>
 
         <h2 class="hero-subtitle">
@@ -19,25 +27,40 @@
       </v-col>
 
       <!-- AVATAR + ICONOS -->
-      <v-col cols="12" md="6" class="d-flex flex-column align-center animate-right">
+      <v-col
+        cols="12"
+        md="6"
+        class="avatar-block animate-right"
+      >
         <v-avatar size="350" class="avatar-border">
-          <img src="FotoPerfil.jpeg" alt="Perfil" class="avatar-img" />
+          <img
+            src="FotoPerfil.jpeg"
+            alt="Perfil"
+            class="avatar-img"
+          />
         </v-avatar>
 
-        <!-- ICONOS -->
-        <!-- ICONOS SOCIALES -->
         <div class="social-links">
-          <a href="https://github.com/josevillar1985" target="_blank" rel="noopener" class="social-icon github"
-            aria-label="GitHub">
+          <a
+            href="https://github.com/josevillar1985"
+            target="_blank"
+            rel="noopener"
+            class="social-icon github"
+            aria-label="GitHub"
+          >
             <i class="mdi mdi-github"></i>
           </a>
 
-          <a href="https://www.linkedin.com/in/jose-angel-villar-095b633a2/" target="_blank" rel="noopener" class="social-icon linkedin"
-            aria-label="LinkedIn">
+          <a
+            href="https://www.linkedin.com/in/jose-angel-villar-095b633a2/"
+            target="_blank"
+            rel="noopener"
+            class="social-icon linkedin"
+            aria-label="LinkedIn"
+          >
             <i class="mdi mdi-linkedin"></i>
           </a>
         </div>
-
       </v-col>
 
     </v-row>
@@ -51,21 +74,22 @@ export default {
 </script>
 
 <style scoped>
-/* ===============================
-   CONTENEDOR
-================================ */
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;
   min-height: calc(100vh - 120px);
+
   display: flex;
   align-items: center;
+  justify-content: center;
+
   padding: 0 24px;
 }
 
-/* ===============================
-   TEXTO
-================================ */
+.hero-row {
+  width: 100%;
+}
+
 .text-block {
   display: flex;
   flex-direction: column;
@@ -77,6 +101,7 @@ export default {
   line-height: 1.1;
   font-weight: 700;
   margin: 0;
+
   background: linear-gradient(90deg, #4ade80, #22d3ee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -95,9 +120,12 @@ export default {
   max-width: 520px;
 }
 
-/* ===============================
-   AVATAR
-================================ */
+.avatar-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .avatar-border {
   padding: 4px;
   background: linear-gradient(135deg, #4ade80, #22d3ee);
@@ -111,83 +139,63 @@ export default {
   border-radius: 50%;
 }
 
-/* ===============================
-   ICONOS SOCIALES (SIN LÍNEAS)
-================================ */
-/* ICONOS SOCIALES */
 .social-links {
   display: flex;
   gap: 28px;
   margin-top: 26px;
 }
 
-/* ANCLA LIMPIA (CLAVE) */
 .social-icon {
-  text-decoration: none !important; /* ← elimina las líneas */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-decoration: none !important;
   font-size: 36px;
   transition: transform 0.25s ease;
 }
 
-/* GitHub blanco */
 .social-icon.github {
   color: #ffffff;
 }
 
-/* LinkedIn azul real */
 .social-icon.linkedin {
   color: #0A66C2;
 }
 
-/* Hover: solo crecer */
 .social-icon:hover {
   transform: scale(1.2);
 }
 
-
-/* ===============================
-   ANIMACIONES
-================================ */
 .animate-left {
   opacity: 0;
-  animation: fadeSlideLeft 1s ease forwards;
+  animation: fadeLeft 0.9s ease forwards;
 }
 
 .animate-right {
   opacity: 0;
-  animation: fadeSlideRight 1s ease forwards;
+  animation: fadeRight 0.9s ease forwards;
   animation-delay: 0.15s;
 }
 
-@keyframes fadeSlideLeft {
+@keyframes fadeLeft {
   from {
     opacity: 0;
-    transform: translateX(-60px);
+    transform: translateX(-50px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-@keyframes fadeSlideRight {
+@keyframes fadeRight {
   from {
     opacity: 0;
-    transform: translateX(60px);
+    transform: translateX(50px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-/* ===============================
-   MOBILE
-================================ */
 @media (max-width: 768px) {
   .hero-container {
     min-height: auto;

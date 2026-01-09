@@ -100,9 +100,7 @@ export default {
 </script>
 
 <style scoped>
-/* ===============================
-   SECCIÓN
-================================ */
+
 .contact {
   padding-bottom: 120px;
 }
@@ -112,9 +110,6 @@ export default {
   margin: 0 auto;
 }
 
-/* ===============================
-   TÍTULO
-================================ */
 .contact-title {
   margin: 0 0 70px 0;
   font-size: 44px;
@@ -125,17 +120,11 @@ export default {
   -webkit-text-fill-color: transparent;
 }
 
-/* ===============================
-   FORMULARIO
-================================ */
 .contact-form {
   max-width: 700px;
   margin: 0 auto;
 }
 
-/* ===============================
-   BOTÓN FUNCIONAL
-================================ */
 .form-actions {
   display: flex;
   justify-content: center;
@@ -167,9 +156,6 @@ export default {
   box-shadow: 0 8px 16px rgba(34, 211, 238, 0.3);
 }
 
-/* ===============================
-   ALERTA
-================================ */
 .success-alert {
   margin-top: 28px;
   padding: 14px 22px;
@@ -180,21 +166,16 @@ export default {
   background: linear-gradient(90deg, #4ade80, #22d3ee);
 }
 
-/* ===============================
-   INPUTS — BLANCOS SIEMPRE
-================================ */
 :deep(input),
 :deep(textarea) {
   color: #ffffff !important;
   caret-color: #22d3ee;
 }
 
-/* Label */
 :deep(.v-label) {
   color: #cbd5e1 !important;
 }
 
-/* Campo */
 :deep(.v-field) {
   background-color: rgba(255, 255, 255, 0.04);
   --v-theme-on-surface: #ffffff;

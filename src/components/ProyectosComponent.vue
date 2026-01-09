@@ -6,20 +6,6 @@
 
       <!-- PROYECTO 1 · POKEDEX -->
       <div class="project-row">
-
-        <!-- IMAGEN + BOTÓN -->
-        <div class="project-image-wrapper">
-          <img
-            src="poke.png"
-            alt="Pokédex"
-            class="project-image"
-          />
-
-          <v-btn class="preview-btn">
-            Previsualizar
-          </v-btn>
-        </div>
-
         <!-- CONTENIDO -->
         <div class="project-content">
           <h2 class="project-name">Pokédex</h2>
@@ -46,11 +32,15 @@
           </div>
         </div>
 
+        <!-- IMAGEN -->
+        <div class="project-image-wrapper">
+          <img src="poke.png" alt="Pokédex" class="project-image" />
+          <v-btn class="preview-btn">Previsualizar</v-btn>
+        </div>
       </div>
 
-      <!-- PROYECTO 2 · VETERINARIA (INVERTIDO) -->
-      <div class="project-row reverse">
-
+      <!-- PROYECTO 2 · VETERINARIA -->
+      <div class="project-row">
         <!-- CONTENIDO -->
         <div class="project-content">
           <h2 class="project-name">Veterinaria</h2>
@@ -77,19 +67,11 @@
           </div>
         </div>
 
-        <!-- IMAGEN + BOTÓN -->
+        <!-- IMAGEN -->
         <div class="project-image-wrapper">
-          <img
-            src="Vet.jpg"
-            alt="Veterinaria"
-            class="project-image"
-          />
-
-          <v-btn class="preview-btn">
-            Previsualizar
-          </v-btn>
+          <img src="Vet.jpg" alt="Veterinaria" class="project-image" />
+          <v-btn class="preview-btn">Previsualizar</v-btn>
         </div>
-
       </div>
 
     </div>
@@ -103,9 +85,6 @@ export default {
 </script>
 
 <style scoped>
-/* ===============================
-   SECCIÓN GENERAL
-================================ */
 
 
 .projects-inner {
@@ -113,9 +92,7 @@ export default {
   margin: 0 auto;
 }
 
-/* ===============================
-   TÍTULO PRINCIPAL
-================================ */
+
 .projects-title {
   font-size: 44px;
   font-weight: 700;
@@ -127,113 +104,71 @@ export default {
   -webkit-text-fill-color: transparent;
 }
 
-/* ===============================
-   FILAS DE PROYECTO
-================================ */
 .project-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 48px;
+  gap: 40px;
   margin-bottom: 100px;
 }
 
-.project-row.reverse {
-  flex-direction: row-reverse;
-}
-
-/* ===============================
-   IMAGEN
-================================ */
 .project-image-wrapper {
-  flex: 0 0 320px;
+  flex: 0 0 500px;
   text-align: center;
-}
-
-/* wrapper SOLO para el hover */
-.project-image-hover {
-  overflow: hidden;
-  border-radius: 14px;
 }
 
 .project-image {
   width: 100%;
-  display: block;
   border-radius: 14px;
-  border: 2px solid transparent;
   padding: 8px;
+  border: 2px solid transparent;
 
   background:
     linear-gradient(#0f0c29, #0f0c29) padding-box,
     linear-gradient(90deg, #4ade80, #22d3ee) border-box;
 
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* hover SOLO cuando pasas por la imagen */
-.project-image-hover:hover .project-image {
-  transform: scale(1.05);
+.project-image:hover {
+  transform: scale(1.04);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* ===============================
-   BOTÓN PREVISUALIZAR
-================================ */
 .preview-btn {
   margin-top: 14px;
   padding: 6px 18px;
-
   font-weight: 600;
   text-transform: none;
-
   color: #0f0c29;
   background: linear-gradient(90deg, #4ade80, #22d3ee);
-
   border-radius: 999px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.preview-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
-}
 
-/* ===============================
-   CONTENIDO TEXTO
-================================ */
 .project-content {
   max-width: 420px;
 }
 
-/* TÍTULO PROYECTO (LIMPIO) */
 .project-name {
   font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 14px;
   color: #f9fafb;
 }
 
-/* pequeño acento elegante */
 .project-name::after {
   content: "";
-  display: block;
   width: 36px;
   height: 3px;
+  display: block;
   margin-top: 6px;
-  border-radius: 2px;
   background: linear-gradient(90deg, #4ade80, #22d3ee);
 }
 
-/* DESCRIPCIÓN */
 .project-desc {
-  font-size: 16px;
-  line-height: 1.6;
   color: #cfd3dc;
+  line-height: 1.6;
 }
 
-/* ===============================
-   TECNOLOGÍAS
-================================ */
 .project-tech {
   margin-top: 18px;
   display: flex;
@@ -242,55 +177,36 @@ export default {
 }
 
 .tech {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
   display: inline-flex;
   align-items: center;
   gap: 6px;
-
-  padding: 6px 14px;
-  font-size: 14px;
-  border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.06);
 }
 
-.tech.vue {
-  color: #4ade80;
-}
+.tech.vue { color: #4ade80; }
+.tech.vuetify { color: #22d3ee; }
+.tech.spring { color: #6db33f; }
+.tech.mysql { color: #f29111; }
 
-.tech.vuetify {
-  color: #22d3ee;
-}
-
-.tech.spring {
-  color: #6db33f;
-}
-
-.tech.mysql {
-  color: #f29111;
-}
-/* ICONOS DE TECNOLOGÍA — BLANCO SUAVE */
 .tech :deep(.v-icon) {
   color: rgba(255, 255, 255, 0.85);
 }
 
 
-/* ===============================
-   RESPONSIVE
-================================ */
 @media (max-width: 768px) {
-  .project-row,
-  .project-row.reverse {
+  .project-row {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 0px;
+    margin-top: 0px; 
   }
 
-  .project-image-wrapper {
-    width: 100%;
-  }
-
+  .project-image-wrapper,
   .project-content {
+    width: 100%;
     max-width: 100%;
   }
 }
-
 </style>

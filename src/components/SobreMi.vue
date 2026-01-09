@@ -43,7 +43,7 @@
 
           <div class="about-card greencard">
             <h3>Tecnologías</h3>
-            <span>VSCode · Intellij · IDEA · DBeaver · PostMan</span>
+            <span>VSCode · Intellij IDEA · DBeaver · PostMan</span>
           </div>
 
         </div>
@@ -61,9 +61,7 @@ export default {
 </script>
 
 <style scoped>
-/* ===============================
-   SECCIÓN GENERAL (SIN MARGIN TOP)
-================================ */
+
 .about {
   padding-bottom: 120px;
 }
@@ -73,9 +71,6 @@ export default {
   margin: 0 auto;
 }
 
-/* ===============================
-   TÍTULO
-================================ */
 .about-title {
   margin: 0 0 70px 0;
   font-size: 44px;
@@ -87,16 +82,13 @@ export default {
   -webkit-text-fill-color: transparent;
 }
 
-/* ===============================
-   CONTENIDO
-================================ */
 .about-content {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 60px;
 }
 
-/* TEXTO */
+
 .about-text p {
   font-size: 16px;
   line-height: 1.7;
@@ -104,9 +96,7 @@ export default {
   margin-bottom: 18px;
 }
 
-/* ===============================
-   CARDS
-================================ */
+
 .about-cards {
   display: flex;
   flex-direction: column;
@@ -150,10 +140,6 @@ export default {
     background-color: #6bae41;
 }
 
-
-/* ===============================
-   RESPONSIVE
-================================ */
 @media (max-width: 768px) {
   .about-content {
     grid-template-columns: 1fr;
