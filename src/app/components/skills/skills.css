@@ -1,0 +1,67 @@
+body{
+  background-color: #0a0a0a;
+}
+.skills-section {
+  padding: 100px 0;
+  background-color: #0a0a0a;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: #fff;
+  text-align: left;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+.section-title span {
+  color: #ff3b3b;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.swiper-slide {
+  width: auto !important;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.skill-box img {
+  height: 65px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.skill-box img[alt="GitHub"] {
+  filter: invert(1);
+}
+
+.skill-box span {
+  color: #aaa;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.skill-box:hover img {
+  transform: scale(1.1);
+}
+
+.skill-box:hover span {
+  color: #fff;
+}

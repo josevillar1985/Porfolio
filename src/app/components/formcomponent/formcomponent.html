@@ -1,0 +1,29 @@
+<section class="contact-section" id="contacto">
+  <div class="container">
+    <div class="contact-box" data-aos="fade-up" data-aos-duration="1000">
+      
+      <h2 class="contact-title">Contáctame<span>.</span></h2>
+      <p class="contact-subtitle">Envíame un mensaje y te responderé lo antes posible.</p>
+      
+      <form class="contact-form" (submit)="sendEmail($event)">
+        <div class="form-group">
+          <input type="text" id="nombre" name="user_name" required placeholder=" ">
+          <label for="nombre">Nombre</label>
+        </div>
+        
+        <div class="form-group">
+          <input type="email" id="email" name="user_email" required placeholder=" ">
+          <label for="email">Email</label>
+        </div>
+        
+        <div class="form-group">
+          <textarea id="mensaje" name="message" rows="5" required placeholder=" "></textarea>
+          <label for="mensaje">¿En qué puedo ayudarte?</label>
+        </div>
+        
+        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+      </form>
+
+    </div>
+  </div>
+</section>

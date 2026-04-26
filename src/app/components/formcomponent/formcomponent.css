@@ -1,0 +1,128 @@
+.contact-section {
+  padding: 100px 0;
+  background-color: #0a0a0a; /* Fondo negro de la web */
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Centra el bloque entero del form */
+}
+
+.contact-box {
+  width: 100%;
+  max-width: 700px; /* Ancho ideal para un formulario centrado */
+  background: #111; /* Fondo sutil para dar profundidad */
+  padding: 50px;
+  border-radius: 12px;
+  border: 1px solid #1a1a1a;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  text-align: left; /* Título y textos alineados con el form */
+}
+
+.contact-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.contact-title span {
+  color: #ff3b3b;
+}
+
+.contact-subtitle {
+  color: #aaa;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Efecto de label flotante */
+.form-group {
+  position: relative;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 18px 15px;
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.form-group label {
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  color: #aaa;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Magia del label flotante */
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+  top: -12px;
+  left: 10px;
+  background: #111; /* Mismo color de fondo de la tarjeta */
+  padding: 0 5px;
+  font-size: 0.85rem;
+  color: #ff3b3b;
+}
+
+/* Focus de los campos */
+.form-group input:focus, 
+.form-group textarea:focus {
+  border-color: #ff3b3b;
+  box-shadow: 0 0 10px rgba(255, 59, 59, 0.1);
+}
+
+.submit-btn {
+  padding: 16px 45px;
+  background-color: #ff3b3b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%; /* Botón a ancho completo */
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #e62e2e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 59, 59, 0.3);
+}
+
+@media (max-width: 768px) {
+  .contact-box {
+    padding: 30px;
+  }
+  .contact-title {
+    font-size: 2.2rem;
+  }
+}

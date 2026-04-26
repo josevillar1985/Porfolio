@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import 'swiper/css';
+@import 'swiper/css/autoplay';
+@import 'animate.css';
+
+@import 'aos/dist/aos.css'; 
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
